@@ -1,6 +1,6 @@
 # Automação para processo de criação de reservas
 - ## Diagrama detalhado de ações do usuário
-![Diagrama](public\diagramaAcoesUsuario.drawio.png)
+![Diagrama](./public/diagramaAcoesUsuario.drawio.png)
 - ## Arquitetura Global
 ## **Criação de RPA** - Automação de criação de Reservas
 - ### Descrição da aplicação
