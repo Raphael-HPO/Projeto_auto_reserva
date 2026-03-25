@@ -1,0 +1,27 @@
+{
+  "name": "projeto_auto_reserva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raphael-HPO/Projeto_auto_reserva.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Raphael-HPO/Projeto_auto_reserva/issues"
+  },
+  "homepage": "https://github.com/Raphael-HPO/Projeto_auto_reserva#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
