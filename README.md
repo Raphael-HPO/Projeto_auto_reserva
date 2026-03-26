@@ -6,7 +6,7 @@
         1. Busca das NFEs disponíveis para a abertura de reserva;
         2. Busca do XML correspondente ao código da NFE;
         3. Com esses dados em mãos criar a reserva no site específico utilizando o RPA.
-
+        
         > Durante esses processos o objetivo é salvar os XMLs em um banco local até o final do processo para caso seja necessário a reutilização da nota, ela esteja disponível.
     
 - ## Diagrama detalhado de ações do usuário
