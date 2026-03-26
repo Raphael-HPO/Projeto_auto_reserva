@@ -1,9 +1,7 @@
 # Automação para processo de criação de reservas
 - ## Diagrama detalhado de ações do usuário
 ![Diagrama](./public/diagramaAcoesUsuario.drawio.png)
-- ## Arquitetura Global
-## **Criação de RPA** - Automação de criação de Reservas
-- ### Descrição da aplicação
+- ## Diagrama da Arquitetura Global
 ```mermaid
 flowchart LR
 
@@ -22,7 +20,7 @@ flowchart LR
                 API3 ~~~ API2
         end
         style APPs fill:#260a0a,stroke:#ff5555,color:#fff,stroke-width:2px
-        subgraph EXT[EXTERNOS]
+        subgraph EXT[CONSULTAS EXTERNAS]
             direction TB
                 SFZ[SEFAZ]:::externos
                 PLF[SITE]:::externos
@@ -43,18 +41,21 @@ flowchart LR
     
 
     API1 <--"<b>1.</b>" GET/ NFEs disponíveis--> BI
-    API1 <--"<b>2.</b>" GET/ Status das NFEs--> DB
-    API1 <--"<b>3.</b>" GET/ XMLs das NFEs--> API2
+    API1 --"<b>2.</b>" GET/ Status das NFEs--> DB
+    API1 <--"`<b>3.</b> GET/ XMLs das NFEs
+    <b>7.</b> Retorno da requisição`"--> API2
     API2 ~~~ API1
+    API2 ~~~ 
     API2 <--"<b>4.</b>" Consultar XMLs--> SFZ
-    API2 --"<b>5.</b>" Salvar dados dos XMLs--> DB
-    API1 --"<b>6.</b>" Dados dos XMLs--> API3
-    API3 <--"<b>7.</b>"Realizar ações RPA--> PLF
-    API3 --"<b>8.</b>" Salvar Status das NFEs--> DB
+    API2 --"<b>6.</b>" Salvar dados dos XMLs--> DB
+    API1 --"<b>8.</b>" POST/Dados dos XMLs--> API3
+    API3 <--"<b>9.</b>"Realizar ações RPA--> PLF
+    API3 --"<b>10.</b>" Salvar Status das NFEs--> DB
     AV ~~~ API2
     
 
 ```
+## **Criação de RPA** - Automação de criação de Reservas
 - ### Ferramentas utilizadas e Pré-Requisitos Globais
     - [TypeScript](https://www.typescriptlang.org/)
     >Linguagem de programação, baseada em JavaScript, utiliziada juntamente com node.js.
